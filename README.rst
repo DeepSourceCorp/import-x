@@ -57,3 +57,10 @@ This Example ``JsonLoader`` can be used directly by importing
     from import_x.loaders.json_loader import JsonLoader
 
 and you are ready to import all the json files.
+
+
+Installation
+============
+.. code:: bash
+
+    pip install import-x
