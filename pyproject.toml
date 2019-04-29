@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "import-x"
+version = "0.1.0"
+description = "Import non-python files"
+license = "MIT"
+authors = ["Mohit Solanki <mohit@deepsource.io>"]
+homepage = "https://github.com/deepsourcelabs/import-x"
+documentation = "https://github.com/deepsourcelabs/import-x"
+repository = "https://github.com/deepsourcelabs/import-x"
+readme = "README.rst"
+
+keywords = ["import machinary", "import hook", "import-x"]
+
+classifiers = [
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+[tool.poetry.dev-dependencies]
+pytest = "^3.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
