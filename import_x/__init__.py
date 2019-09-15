@@ -27,15 +27,15 @@ class ExtensionLoader(MetaPathFinder, Loader):
     def _get_file_path(dir_path, file_name, extension):
         path = pathlib.Path(dir_path).joinpath(file_name + extension)
         if path.exists():
-            return path.resolve().as_posix()
-        return ""
+            return str(path.resolve())
+        return ''
 
     @classmethod
     def find_spec(cls, fullname, path, *_, **__):
         """Return the spec of the module."""
 
         if path is None:
-            path = [os.getcwd()]
+            path = sys.path
 
         if '.' in fullname:
             name = fullname.split(sep='.')[-1]
@@ -45,7 +45,9 @@ class ExtensionLoader(MetaPathFinder, Loader):
         for dir_name in path:
             path = cls._get_file_path(dir_name, name, cls.extension)
             if path:
-                return spec_from_file_location(name=fullname, location=path, loader=cls())
+                return spec_from_file_location(
+                    name=fullname, location=path, loader=cls()
+                )
 
         # could't import this one.
         return None
