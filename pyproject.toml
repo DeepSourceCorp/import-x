@@ -1,13 +1,13 @@
 [tool.poetry]
 name = "import-x"
-version = "0.1.0"
+version = "0.1.1"
 description = "Import non-python files"
 license = "MIT"
 authors = ["Mohit Solanki <mohit@deepsource.io>"]
 homepage = "https://github.com/deepsourcelabs/import-x"
 documentation = "https://github.com/deepsourcelabs/import-x"
 repository = "https://github.com/deepsourcelabs/import-x"
-readme = "README.rst"
+readme = "README.md"
 
 keywords = ["import machinary", "import hook", "import-x"]
 
